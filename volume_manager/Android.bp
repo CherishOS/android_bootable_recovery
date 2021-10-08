@@ -47,7 +47,6 @@ cc_library_shared {
         "libdiskconfig",
         "liblog",
         "libselinux",
-        "libsgdisk",
         "libsysutils",
     ],
     static_libs: [
@@ -55,6 +54,7 @@ cc_library_shared {
         "libfstab",
         "libext2_blkid",
         "libext2_uuid",
+        "libgptf",
     ],
     export_include_dirs: ["include"],
 }
