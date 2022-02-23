@@ -816,10 +816,10 @@ Device::BuiltinAction start_recovery(Device* device, const std::vector<std::stri
     ui->SetStage(st_cur, st_max);
   }
 
-  std::string ver_date = android::base::GetProperty("ro.fluid.build.date", "");
+  std::string ver_date = android::base::GetProperty("ro.cherish.build.date", "");
 
   std::vector<std::string> title_lines = {
-    "Version " + android::base::GetProperty("ro.fluid.build.version", "(unknown)") +
+    "Version " + android::base::GetProperty("ro.cherish.version.display", "(unknown)") +
         " (" + ver_date + ")",
   };
   if (android::base::GetBoolProperty("ro.build.ab_update", false)) {
