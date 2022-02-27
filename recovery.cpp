@@ -388,7 +388,7 @@ static bool AskToReboot(Device* device, Device::BuiltinAction chosen_action) {
   switch (chosen_action) {
     case Device::REBOOT:
       header_text = "reboot";
-      item_text = " Reboot system now";
+      item_text = " Reboot to system";
       break;
     case Device::SHUTDOWN:
       header_text = "power off";
