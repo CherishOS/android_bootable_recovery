@@ -188,7 +188,7 @@ static bool CheckAbSpecificMetadata(const std::map<std::string, std::string>& me
       LOG(ERROR) << "Downgrade package must have a pre-build version set, not allowed.";
       undeclared_downgrade = true;
     }
-  }*/
+  }
 
   if (undeclared_downgrade &&
       !(ui->IsTextVisible() && ask_to_continue_downgrade(ui->GetDevice()))) {
