@@ -1034,13 +1034,15 @@ bool ScreenRecoveryUI::Init(const std::string& locale) {
   erasing_text_ = LoadLocalizedBitmap("erasing_text");
   no_command_text_ = LoadLocalizedBitmap("no_command_text");
   error_text_ = LoadLocalizedBitmap("error_text");
-
-  default_logo = LoadBitmap("logo_image");
+  
   back_icon_ = LoadBitmap("ic_back");
   back_icon_sel_ = LoadBitmap("ic_back_sel");
   if (android::base::GetBoolProperty("ro.boot.dynamic_partitions", false) ||
       android::base::GetBoolProperty("ro.fastbootd.available", false)) {
+    default_logo = LoadBitmap("logo_image_switch");
     fastbootd_logo_ = LoadBitmap("fastbootd");
+  } else {
+    default_logo = LoadBitmap("logo_image");
   }
 
   // Background text for "installing_update" could be "installing update" or
